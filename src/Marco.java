@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class Marco extends JFrame {
     private LaminateMap laminateTypeMap;
-    private LaminateMap laminateSizeMap;
+    private LaminateMapSize laminateSizeMap;
     private LaminateCharacters laminateCharacters;
     private String typeMap;
-    private String sizeMap;
+    private int sizeMap;
     private ArrayList<Integer> numCharacters;
 
     public Marco() throws HeadlessException {
@@ -22,7 +22,7 @@ public class Marco extends JFrame {
         String sizeMap[] = {"8", "16", "24"};
         String characters[] = {"Mago", "Arquero", "Hoplita", "Medusa", "Quimera", "Hidra"};
         laminateTypeMap = new LaminateMap("Tipo mapa", typeMap);
-        laminateSizeMap = new LaminateMap("Tamaño mapa", sizeMap);
+        laminateSizeMap = new LaminateMapSize("Tamaño mapa", sizeMap);
         laminateCharacters = new LaminateCharacters("Personajes", characters);
 
         setLayout(new BorderLayout());
@@ -61,7 +61,7 @@ public class Marco extends JFrame {
         return typeMap;
     }
 
-    public String getSizeMap() {
+    public int getSizeMap() {
         return sizeMap;
     }
 
